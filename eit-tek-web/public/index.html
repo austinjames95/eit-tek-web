@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>EIT-tek — Medical-grade tissue imaging for the sideline</title>
+<meta name="description" content="EIT-tek is developing a portable, non-invasive imaging device that uses Electrical Impedance Tomography to assess musculoskeletal health in real time." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/styles/styles.css">
+<link rel="stylesheet" href="./src/styles/indexStyle.css">
+<link rel="stylesheet" href="./navbar/nav.css">
+</head>
+<body>
+
+<!-- NAV -->
+<div id="nav"></div>
+
+<!-- HERO -->
+<header class="hero" data-screen-label="Hero">
+  <div class="hero-grid">
+    <div class="hero-meta">
+      <div><span>Status</span><strong>Pre-seed · Prototype stage</strong></div>
+      <div><span>Modality</span><strong>Electrical Impedance Tomography</strong></div>
+      <div><span>Radiation</span><strong>0 mSv — zero exposure</strong></div>
+      <div><span>Scan time</span><strong>&lt; 60 seconds</strong></div>
+    </div>
+
+    <h1 class="display hero-title">
+      Tissue imaging.<br>
+      <span class="underline">Sideline-ready<span class="red">.</span></span>
+    </h1>
+
+    <div class="hero-row">
+      <div>
+        <div class="lede">
+          EIT-tek is building a portable, non-invasive imaging device that uses Electrical Impedance Tomography to assess
+          musculoskeletal health. An electrode sleeve captures tissue conductivity and renders a visual
+          impedance map on a tablet — giving trainers actionable insight in under a minute, with zero radiation.
+        </div>
+        <div class="closer">
+          <strong>
+            Know your Body. <br>
+            Own your Recovery.
+          </strong>
+        </div>
+        <div class="hero-actions">
+          <!-- <a href="#solution" class="btn">See how it works <span class="arrow"></span></a> -->
+          <a href="./contact.html" class="btn btn-ghost">Partner with us</a>
+        </div>
+      </div>
+      <div>
+        <div class="tag tag-row" style="margin-bottom: 16px;">Fig. 01 — 16-channel electrode ring</div>
+        <div class="device">
+          <!-- SVG: electrode ring (original illustration — simple geometry) -->
+          <svg class="ring-svg" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <pattern id="hex" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1" fill="#0A0A0A" opacity="0.25"/>
+              </pattern>
+            </defs>
+            <rect width="200" height="200" fill="url(#hex)"/>
+            <!-- outer ring -->
+            <circle cx="100" cy="100" r="78" fill="none" stroke="#0A0A0A" stroke-width="1"/>
+            <circle cx="100" cy="100" r="62" fill="none" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="2 4"/>
+            <!-- electrodes -->
+            <g id="electrodes"></g>
+            <!-- current path -->
+            <path d="M100 22 Q 40 100 178 100" fill="none" stroke="#FF2D20" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.9"/>
+            <path d="M22 100 Q 100 160 100 178" fill="none" stroke="#FF2D20" stroke-width="1" stroke-dasharray="2 4" opacity="0.6"/>
+            <!-- limb cross-section -->
+            <circle cx="100" cy="100" r="34" fill="#F5F3EE" stroke="#0A0A0A"/>
+            <circle cx="100" cy="100" r="22" fill="none" stroke="#0A0A0A" stroke-dasharray="1 3"/>
+            <circle cx="95" cy="96" r="6" fill="#FF2D20" opacity="0.7"/>
+            <text x="100" y="103" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A0A0A" letter-spacing="1">σ · ROI</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Portable</span><span>Non-invasive</span><span>Zero radiation</span><span>Real-time</span><span>Sideline-deployable</span><span>Affordable</span><span>NASA-derived signal processing</span>
+    <span>Portable</span><span>Non-invasive</span><span>Zero radiation</span><span>Real-time</span><span>Sideline-deployable</span><span>Affordable</span><span>NASA-derived signal processing</span>
+  </div>
+</div>
+
+<!-- PROBLEM / STATS -->
+<section data-screen-label="Problem">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <div class="num">001 / The problem</div>
+        <h2 class="display h-lg">A monitoring gap at field-level.</h2>
+      </div>
+      <p class="lede" style="max-width: 34ch;">
+        High-quality musculoskeletal imaging stays locked in hospitals. Trainers make
+        return-to-play calls without the data to back them.
+      </p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="idx">01</div>
+        <div class="big"><span class="red">3.5M+</span></div>
+        <p>Youth athletes suffer sports injuries in the U.S. every year.</p>
+      </div>
+      <div class="stat">
+        <div class="idx">02</div>
+        <div class="big">24%</div>
+        <p>Of athletes retire early from sport due to injury-related causes.</p>
+      </div>
+      <div class="stat">
+        <div class="idx">03</div>
+        <div class="big">3–5×</div>
+        <p>Higher injury prevalence vs. the general population.</p>
+      </div>
+      <div class="stat">
+        <div class="idx">04</div>
+        <div class="big"><span class="red">$$$</span></div>
+        <p>The cost of imaging blocks ongoing monitoring of musculoskeletal health.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution" data-screen-label="Solution">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <div class="num">002 / The solution</div>
+        <h2 class="display h-lg">A wearable sleeve. A tablet. A map.</h2>
+      </div>
+    </div>
+
+    <div class="solution">
+      <div class="solution-visual">
+        <div class="slider-track">
+          <img src="./images/movingElectrode.png" alt="Moving electrode configuration" class="slide active">
+          <img src="./images/stationaryOne.png" alt="Stationary electrode configuration 1" class="slide">
+          <img src="./images/stationaryTwo.png" alt="Stationary electrode configuration 2" class="slide">
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev" aria-label="Previous image">&#8592;</button>
+          <div class="slider-dots">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+          </div>
+          <button class="slider-btn next" aria-label="Next image">&#8594;</button>
+        </div>
+      </div>
+
+      <div class="solution-body solution-body-grid">
+        <div>
+          <div class="tag tag-row">How it works</div>
+          <h2 class="display h-md">Musculoskeletal assessment —<br>fast, reliable, accessible.</h2>
+          <p class="lede">
+            EIT-tek detects and proactively prevents injury by comparing user data across time points,
+            surfacing insights previously only available with expensive hospital-grade equipment.
+          </p>
+        </div>
+
+        <ul class="bullets">
+          <li>
+            <span class="no">01</span>
+            <div>
+              <h4>Wearable electrode sleeve</h4>
+              <p>Slips onto the injury hot-spot — elbow, knee, ankle, wrist, forearm, hamstring — and injects a safe, low-amplitude current across the tissue volume.</p>
+            </div>
+          </li>
+          <li>
+            <span class="no">02</span>
+            <div>
+              <h4>Real-time impedance map</h4>
+              <p>Conductivity data is reconstructed into a 2D / 3D impedance map rendered live on a tablet at the sideline.</p>
+            </div>
+          </li>
+          <li>
+            <span class="no">03</span>
+            <div>
+              <h4>Timepoint comparison</h4>
+              <p>Pre-season vs. playoffs: compare the same athlete across sessions to flag subclinical changes before they become injuries.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HARDWARE -->
+<section data-screen-label="Hardware">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <div class="num">003 / The hardware</div>
+        <h2 class="display h-lg">Two configurations.<br>One platform.</h2>
+      </div>
+      <p class="lede" style="max-width: 34ch;">
+        A shared signal chain powers both scanning modes, so the software stack stays the same whether you're
+        building a 2D stack or a volumetric reconstruction.
+      </p>
+    </div>
+
+    <div class="hw-cards">
+      <div class="hw-card">
+        <div class="hw-vis">
+          <svg viewBox="0 0 300 180" width="78%" height="78%" aria-hidden="true">
+            <!-- limb -->
+            <rect x="40" y="60" width="220" height="60" rx="30" fill="none" stroke="#0A0A0A" stroke-width="1.2"/>
+            <!-- moving ring positions -->
+            <g stroke="#FF2D20" fill="none" stroke-width="1.5">
+              <ellipse cx="80" cy="90" rx="14" ry="36" opacity="0.35"/>
+              <ellipse cx="130" cy="90" rx="14" ry="36" opacity="0.6"/>
+              <ellipse cx="180" cy="90" rx="14" ry="36" opacity="0.85"/>
+              <ellipse cx="230" cy="90" rx="14" ry="36" opacity="0.3"/>
+            </g>
+            <!-- active ring -->
+            <ellipse cx="180" cy="90" rx="14" ry="36" fill="none" stroke="#FF2D20" stroke-width="2.5"/>
+            <!-- direction arrow -->
+            <path d="M80 150 L 230 150" stroke="#0A0A0A" stroke-width="1"/>
+            <path d="M225 145 L 232 150 L 225 155" stroke="#0A0A0A" stroke-width="1" fill="none"/>
+            <text x="150" y="168" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#0A0A0A" letter-spacing="1">SCAN DIRECTION</text>
+          </svg>
+        </div>
+        <div class="hw-body">
+          <span class="hw-tag">Mode A · Single moving ring</span>
+          <h3>Slide, stack, reconstruct.</h3>
+          <p>The user moves a single electrode band across the limb to generate 2D slices that stack into a 3D image — similar to a CT scan.</p>
+        </div>
+      </div>
+
+      <div class="hw-card">
+        <div class="hw-vis">
+          <svg viewBox="0 0 300 180" width="78%" height="78%" aria-hidden="true">
+            <rect x="40" y="60" width="220" height="60" rx="30" fill="none" stroke="#0A0A0A" stroke-width="1.2"/>
+            <g stroke="#FF2D20" fill="none" stroke-width="2">
+              <ellipse cx="100" cy="90" rx="12" ry="36"/>
+              <ellipse cx="150" cy="90" rx="12" ry="36"/>
+              <ellipse cx="200" cy="90" rx="12" ry="36"/>
+            </g>
+            <!-- cross-plane current paths -->
+            <g stroke="#FF2D20" stroke-dasharray="3 3" fill="none" opacity="0.7">
+              <path d="M100 70 Q 150 50 200 70"/>
+              <path d="M100 110 Q 150 130 200 110"/>
+              <path d="M100 70 L 200 110"/>
+              <path d="M200 70 L 100 110"/>
+            </g>
+            <text x="150" y="168" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#0A0A0A" letter-spacing="1">CROSS-PLANE INJECTION</text>
+          </svg>
+        </div>
+        <div class="hw-body">
+          <span class="hw-tag">Mode B · Multi-ring array</span>
+          <h3>Capture the volume at once.</h3>
+          <p>Multiple electrode rings capture the full scan without repositioning. Cross-plane current injection creates diagonal paths through the tissue volume for true 3D reconstruction.</p>
+          <div class="hw-spots">
+            <span>Elbow</span><span>Knee</span><span>Ankle</span><span>Wrist</span><span>Forearm</span><span>Hamstring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH EDGE -->
+<section class="edge" data-screen-label="Edge">
+  <div class="edge-inner">
+    <div class="edge-row">
+      <div>
+        <div class="tag tag-row">004 / Technology edge</div>
+        <h2 class="display h-lg">Signal<br>from noise.</h2>
+        <p>
+          EIT-tek integrates the <strong>Hilbert-Huang Transform</strong>, a NASA-developed signal processing
+          algorithm originally built for space-mission data analysis. HHT delivers superior noise filtering for
+          nonlinear biomedical signals — clearer, more accurate imaging from low-cost hardware.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap: wrap; margin-top: 28px;">
+          <span class="hw-tag" style="background:transparent; border-color: #2a2a28; color: #c9c7bf;">NASA HHT licensing</span>
+          <span class="hw-tag" style="background:transparent; border-color: #2a2a28; color: #c9c7bf;">Nonlinear signal decomposition</span>
+          <span class="hw-tag" style="background:transparent; border-color: #2a2a28; color: #c9c7bf;">Adaptive denoising</span>
+        </div>
+      </div>
+
+      <div class="waveform">
+        <div class="wave-label tl">RAW · V(t)</div>
+        <div class="wave-label tr">● HHT · FILTERED</div>
+        <div class="wave-label bl">0.00s</div>
+        <div class="wave-label br">1.00s</div>
+        <svg viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true">
+          <!-- noisy raw -->
+          <path id="raw" fill="none" stroke="#807e75" stroke-width="1" opacity="0.8"
+            d="M0 240 Q 20 180 40 210 T 80 200 Q 100 260 120 190 T 160 220 Q 180 150 200 230 T 240 180 Q 260 260 280 200 T 320 230 Q 340 170 360 210 T 400 220"/>
+          <!-- clean HHT -->
+          <path fill="none" stroke="#FF2D20" stroke-width="2.5"
+            d="M0 220 C 50 120 100 320 150 200 C 200 80 250 300 300 180 C 340 100 380 260 400 200"/>
+          <!-- intrinsic mode functions stacked -->
+          <path fill="none" stroke="#FF2D20" stroke-width="1" opacity="0.35"
+            d="M0 320 C 40 290 80 350 120 320 C 160 290 200 350 240 320 C 280 290 320 350 360 320 L 400 320"/>
+          <path fill="none" stroke="#FF2D20" stroke-width="1" opacity="0.25"
+            d="M0 360 C 25 345 50 375 75 360 C 100 345 125 375 150 360 C 175 345 200 375 225 360 C 250 345 275 375 300 360 C 325 345 350 375 375 360 L 400 360"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section data-screen-label="Market">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <div class="num">005 / Market</div>
+        <h2 class="display h-lg">A gap<br>no one fills.</h2>
+      </div>
+    </div>
+
+    <div class="stats" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="stat">
+        <div class="idx">Sports medicine · 2034</div>
+        <div class="big"><span class="red">$11.5B</span></div>
+        <p>Global sports medicine market projection. CAGR ~5.8%.</p>
+      </div>
+      <div class="stat">
+        <div class="idx">Orthopedic imaging · 2032</div>
+        <div class="big">$6.4B</div>
+        <p>Orthopedic imaging market expected to nearly double from today.</p>
+      </div>
+      <div class="stat">
+        <div class="idx">Our target</div>
+        <div class="big">Intersection</div>
+        <p>Affordable, portable musculoskeletal imaging — unfilled by current products.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section data-screen-label="Roadmap">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-l">
+        <div class="num">006 / Roadmap</div>
+        <h2 class="display h-lg">Concept → clearance → field.</h2>
+      </div>
+      <p class="lede" style="max-width: 34ch;">
+        Four phases from provisional patent to FDA 510(k) clearance and athletic-department integration.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-col active">
+        <div class="phase">S1 <small>Now</small></div>
+        <h5>Foundations</h5>
+        <ul>
+          <li>Prototype hardware assembly</li>
+          <li>Build 2D circular mesh in pyEIT</li>
+          <li>Hilbert-Huang on example data</li>
+          <li>Provisional patent filed</li>
+        </ul>
+      </div>
+      <div class="tl-col">
+        <div class="phase">S2 <small>Next</small></div>
+        <h5>Validation</h5>
+        <ul>
+          <li>Phantom validation testing</li>
+          <li>Create mock electrode sleeves</li>
+          <li>Test HHT on phantom setup</li>
+          <li>NASA Startup license acquisition</li>
+        </ul>
+      </div>
+      <div class="tl-col">
+        <div class="phase">S3 <small>Pilot</small></div>
+        <h5>Human testing</h5>
+        <ul>
+          <li>Custom software design + build</li>
+          <li>Pilot human testing</li>
+          <li>HHT on human data</li>
+        </ul>
+      </div>
+      <div class="tl-col">
+        <div class="phase">S4 <small>Market</small></div>
+        <h5>Launch</h5>
+        <ul>
+          <li>Seek FDA 510(k) clearance</li>
+          <li>Seed funding round</li>
+          <li>Athletic-dept integration</li>
+          <li>Enter market</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASK -->
+<section data-screen-label="Ask">
+  <div class="wrap">
+    <hr class="rule-thick" style="margin-bottom: 0;">
+    <div class="ask">
+      <div>
+        <div class="num tag">007 / The ask</div>
+        <div class="ask-amount">
+          <span class="red">$</span>60K
+          <small>Pre-seed · Concept → validated prototype</small>
+        </div>
+      </div>
+      <div>
+        <p class="lede" style="font-size: 19px;">
+          We're raising <strong>$60,000 in pre-seed funding</strong> to complete prototype development, secure
+          NASA HHT licensing, and launch pilot testing with university athletic programs. This takes EIT-tek from
+          concept to a validated prototype with human pilot data — positioning us to pursue FDA 510(k) clearance and
+          a larger seed round.
+        </p>
+        <div style="display:flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+          <a href="contact.html" class="btn">Request the deck <span class="arrow"></span></a>
+          <a href="updates.html" class="btn btn-ghost">See progress</a>
+        </div>
+      </div>
+    </div>
+    <hr class="rule-thick" style="margin-top: 0;">
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="wrap" style="padding: 0;">
+  <div class="cta-band">
+    <h2 class="display h-md">Trainer, team physician, or investor? Let's talk.</h2>
+    <a href="contact.html" class="btn">Get in touch <span class="arrow"></span></a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot" data-screen-label="Footer">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">EIT-tek<span class="dot"></span></div>
+        <p style="color:#807e75; font-size: 14px; max-width: 32ch; margin-top: 20px;">
+          Electrical Impedance Tomography medical imaging for sideline musculoskeletal assessment.
+        </p>
+      </div>
+      <div class="foot-col">
+        <h5>Pages</h5>
+        <a href="index.html">Index</a>
+        <a href="updates.html">Updates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="/cdn-cgi/l/email-protection#c6a7b3b5b2afa8b5a5aeaab3b2b2a3b486a1aba7afaae8a5a9ab"><span class="__cf_email__" data-cfemail="77160204031e1904141f1b020303120537101a161e1b5914181a">[email&#160;protected]</span></a>
+        <a href="tel:+19492440696">(949) 244-0696</a>
+      </div>
+      <div class="foot-col">
+        <h5>Founder</h5>
+        <p>Austin Schlutter</p>
+        <p style="color:#807e75;">Founder · EIT-tek</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 EIT-tek · All rights reserved</div>
+      <div>Pre-seed · Prototype stage · Not for clinical use</div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="./navbar/nav.js"></script>
+
+<script>
+// Fill in electrodes around ring
+  (function(){
+    const g = document.getElementById('electrodes');
+    if (!g) return;
+    const n = 16, cx = 100, cy = 100, r = 78;
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 - Math.PI / 2;
+      const x = cx + Math.cos(a) * r;
+      const y = cy + Math.sin(a) * r;
+      const circ = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      circ.setAttribute('cx', x); circ.setAttribute('cy', y); circ.setAttribute('r', 3.2);
+      circ.setAttribute('fill', '#FF2D20');
+      g.appendChild(circ);
+      // tick
+      const x2 = cx + Math.cos(a) * (r - 8);
+      const y2 = cy + Math.sin(a) * (r - 8);
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x); line.setAttribute('y1', y);
+      line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+      line.setAttribute('stroke', '#0A0A0A'); line.setAttribute('stroke-width', 0.6);
+      g.appendChild(line);
+    }
+  })();
+</script>
+
+<script>
+  (function () {
+    const slides = document.querySelectorAll('.solution-visual .slide');
+    const dots = document.querySelectorAll('.solution-visual .slider-dot');
+    let current = 0;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    document.querySelector('.solution-visual .prev').addEventListener('click', () => goTo(current - 1));
+    document.querySelector('.solution-visual .next').addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    setInterval(() => goTo(current + 1), 4000);
+  })();
+</script>
+
+</body>
+</html>

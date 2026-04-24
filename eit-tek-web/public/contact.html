@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — EIT-tek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/styles/styles.css">
+<link rel="stylesheet" href="./src/styles/contactStyle.css">
+<link rel="stylesheet" href="./navbar/nav.css">
+</head>
+<body>
+
+<div id="nav"></div>
+
+<header class="page-hero" data-screen-label="Contact Hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow-strip">
+      <span class="num">008</span><span class="dash">——</span><span>Contact</span><span class="dash">——</span><span>One-person operation · Fast response</span>
+    </div>
+    <h1 class="display">Let's talk<span class="red">.</span></h1>
+    <p class="lede" style="max-width: 56ch;">
+      Athletic trainer curious about deploying EIT-tek on the field? Investor considering the pre-seed?
+      University athletics looking to pilot? Drop a line — responses within 48 hours.
+    </p>
+  </div>
+</header>
+
+<section style="padding: 0;" data-screen-label="Contact Body">
+  <div class="wrap">
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <form class="form-card" id="contactForm" novalidate>
+        <div class="form-head">
+          <h2>Send a message.</h2>
+          <p>All fields with a red dot are required.</p>
+        </div>
+
+        <div class="field-row">
+          <div class="field" data-required>
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" />
+            <div class="err">Name required</div>
+          </div>
+          <div class="field" data-required>
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" />
+            <div class="err">Valid email required</div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-org">Organization</label>
+            <input id="f-org" name="org" type="text" placeholder="Optional" />
+            <div class="err"></div>
+          </div>
+          <div class="field">
+            <label for="f-role">Role</label>
+            <select id="f-role" name="role">
+              <option value="">Select...</option>
+              <option>Athletic trainer</option>
+              <option>Team physician</option>
+              <option>Researcher</option>
+              <option>Investor</option>
+              <option>Press / media</option>
+              <option>Other</option>
+            </select>
+            <div class="err"></div>
+          </div>
+        </div>
+
+        <div class="field" data-required>
+          <label>I'm reaching out about</label>
+          <div class="radio-row">
+            <label><input type="radio" name="topic" value="pilot" /><span>Pilot program</span></label>
+            <label><input type="radio" name="topic" value="invest" /><span>Investment</span></label>
+            <label><input type="radio" name="topic" value="partner" /><span>Partnership</span></label>
+            <label><input type="radio" name="topic" value="research" /><span>Research</span></label>
+            <label><input type="radio" name="topic" value="other" /><span>Other</span></label>
+          </div>
+          <div class="err">Pick a topic</div>
+        </div>
+
+        <div class="field" data-required>
+          <label for="f-msg">Message</label>
+          <textarea id="f-msg" name="message" rows="5" placeholder="Tell me about your team, your timeline, or your question."></textarea>
+          <div class="err">Message required</div>
+        </div>
+
+        <div class="form-actions">
+          <span class="meta">→ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b4a5e585f4245584843475e5f5f4e596b4c464a424705484446">[email&#160;protected]</a></span>
+          <button type="submit" class="btn submit-btn" id="submitBtn">Send message <span class="arrow"></span></button>
+        </div>
+
+        <div class="success" id="success">Message queued — reply within 48 hours</div>
+      </form>
+
+      <!-- SIDE PANEL -->
+      <aside class="side-panel">
+
+        <a class="channel" href="/cdn-cgi/l/email-protection#4e2f3b3d3a27203d2d26223b3a3a2b3c0e29232f2722602d2123">
+          <div class="channel-label">Email · primary</div>
+          <div class="channel-val"><span class="__cf_email__" data-cfemail="b2d3c7c1c6dbdcc1d1dadec7c6c6d7c0f2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></div>
+          <div class="channel-arrow">↗</div>
+        </a>
+
+        <a class="channel" href="tel:+19492440696">
+          <div class="channel-label">Phone</div>
+          <div class="channel-val">(949) 244-0696</div>
+          <div class="channel-arrow">↗</div>
+        </a>
+
+        <div class="founder-card">
+          <div class="founder-photo">
+            <div class="dots"></div>
+            <div class="placeholder-label">[ Founder portrait ]</div>
+          </div>
+          <div class="founder-info">
+            <div class="role">Founder</div>
+            <h3>Austin Schlutter</h3>
+            <p>Leading hardware, signal processing, and clinical-partner development at EIT-tek.</p>
+          </div>
+        </div>
+
+        <div class="hours">
+          <h5>Response window · PT</h5>
+          <div class="hours-row"><span>Mon – Fri</span><span>09:00 — 19:00</span></div>
+          <div class="hours-row"><span>Saturday</span><span>By appointment</span></div>
+          <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+          <div class="hours-row active" id="nowRow" style="border-top:1px solid var(--ink); margin-top:10px; padding-top:12px;">
+            <span>Now</span><span id="nowVal">—</span>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<footer class="foot" data-screen-label="Footer">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">EIT-tek<span class="dot"></span></div>
+        <p style="color:#807e75; font-size: 14px; max-width: 32ch; margin-top: 20px;">
+          Electrical Impedance Tomography medical imaging for sideline musculoskeletal assessment.
+        </p>
+      </div>
+      <div class="foot-col">
+        <h5>Pages</h5>
+        <a href="index.html">Index</a>
+        <a href="updates.html">Updates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="/cdn-cgi/l/email-protection#80e1f5f3f4e9eef3e3e8ecf5f4f4e5f2c0e7ede1e9ecaee3efed"><span class="__cf_email__" data-cfemail="81e0f4f2f5e8eff2e2e9edf4f5f5e4f3c1e6ece0e8edafe2eeec">[email&#160;protected]</span></a>
+        <a href="tel:+19492440696">(949) 244-0696</a>
+      </div>
+      <div class="foot-col">
+        <h5>Founder</h5>
+        <p>Austin Schlutter</p>
+        <p style="color:#807e75;">Founder · EIT-tek</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 EIT-tek · All rights reserved</div>
+      <div>Pre-seed · Prototype stage · Not for clinical use</div>
+    </div>
+  </div>
+</footer>
+<script type="module" src="./navbar/nav.js"></script>
+<script>
+// Now indicator
+(function(){
+  const el = document.getElementById('nowVal');
+  const row = document.getElementById('nowRow');
+  const d = new Date();
+  const h = d.getHours();
+  const day = d.getDay();
+  let status = 'Out of hours';
+  if (day >= 1 && day <= 5 && h >= 9 && h < 19) status = '● Available';
+  else if (day === 6) status = 'By appointment';
+  el.textContent = status;
+  if (!status.includes('Available')) row.classList.remove('active');
+})();
+
+// Form
+(function(){
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('success');
+  const btn = document.getElementById('submitBtn');
+
+  function validate() {
+    let ok = true;
+    form.querySelectorAll('.field').forEach(f => f.classList.remove('invalid'));
+
+    // Required text
+    ['f-name', 'f-msg'].forEach(id => {
+      const input = document.getElementById(id);
+      if (!input.value.trim()) {
+        input.closest('.field').classList.add('invalid');
+        ok = false;
+      }
+    });
+
+    // Email
+    const email = document.getElementById('f-email');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      email.closest('.field').classList.add('invalid');
+      ok = false;
+    }
+
+    // Topic radio
+    if (!form.querySelector('input[name="topic"]:checked')) {
+      form.querySelector('input[name="topic"]').closest('.field').classList.add('invalid');
+      ok = false;
+    }
+
+    return ok;
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+    btn.disabled = true;
+    btn.innerHTML = 'Sending...';
+    setTimeout(() => {
+      success.classList.add('show');
+      form.reset();
+      btn.disabled = false;
+      btn.innerHTML = 'Send message <span class="arrow"></span>';
+    }, 600);
+  });
+
+  form.querySelectorAll('input, select, textarea').forEach(i => {
+    i.addEventListener('input', () => i.closest('.field')?.classList.remove('invalid'));
+    i.addEventListener('change', () => i.closest('.field')?.classList.remove('invalid'));
+  });
+})();
+</script>
+
+</body>
+</html>
