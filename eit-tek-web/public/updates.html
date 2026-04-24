@@ -9,20 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./src/styles/styles.css">
 <link rel="stylesheet" href="./src/styles/updates.css">
+<link rel="stylesheet" href="./navbar/nav.css">
 </head>
 <body>
 
-<nav class="nav" data-screen-label="Nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">EIT-tek<span class="dot"></span></a>
-    <div class="nav-links">
-      <a href="index.html">Index</a>
-      <a href="updates.html" class="active">Updates</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <a class="nav-cta" href="contact.html">Get in touch →</a>
-  </div>
-</nav>
+<div id="nav"></div>
 
 <header class="page-hero" data-screen-label="Updates Hero">
   <div class="page-hero-inner">
@@ -78,7 +69,6 @@
 
       <article class="entry featured" data-cat="milestone" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Apr 22, 2026</span>
           <span class="phase-tag">S1 · Now</span>
           <span class="cat-tag" data-cat="milestone">Milestone</span>
         </div>
@@ -102,7 +92,6 @@
 
       <article class="entry" data-cat="software" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Apr 15, 2026</span>
           <span class="phase-tag">S1</span>
           <span class="cat-tag" data-cat="software">Software</span>
         </div>
@@ -124,7 +113,6 @@
 
       <article class="entry" data-cat="hardware" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Apr 08, 2026</span>
           <span class="phase-tag">S1</span>
           <span class="cat-tag" data-cat="hardware">Hardware</span>
         </div>
@@ -145,7 +133,6 @@
 
       <article class="entry" data-cat="research" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Apr 01, 2026</span>
           <span class="phase-tag">S1</span>
           <span class="cat-tag" data-cat="research">Research</span>
         </div>
@@ -166,7 +153,6 @@
 
       <article class="entry" data-cat="ops" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Mar 25, 2026</span>
           <span class="phase-tag">S1</span>
           <span class="cat-tag" data-cat="ops">Ops</span>
         </div>
@@ -183,7 +169,6 @@
 
       <article class="entry" data-cat="research" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Mar 18, 2026</span>
           <span class="phase-tag">S1</span>
           <span class="cat-tag" data-cat="research">Research</span>
         </div>
@@ -200,7 +185,6 @@
 
       <article class="entry" data-cat="hardware" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Mar 10, 2026</span>
           <span class="phase-tag">S1</span>
           <span class="cat-tag" data-cat="hardware">Hardware</span>
         </div>
@@ -217,7 +201,6 @@
 
       <article class="entry" data-cat="milestone" data-phase="S1">
         <div class="entry-meta">
-          <span class="date">Mar 01, 2026</span>
           <span class="phase-tag">S1</span>
           <span class="cat-tag" data-cat="milestone">Milestone</span>
         </div>
@@ -265,9 +248,9 @@
       </div>
       <div class="foot-col">
         <h5>Pages</h5>
-        <a href="index.html">Index</a>
-        <a href="updates.html">Updates</a>
-        <a href="contact.html">Contact</a>
+        <a href="./index.html">Index</a>
+        <a href="./updates.html">Updates</a>
+        <a href="./contact.html">Contact</a>
       </div>
       <div class="foot-col">
         <h5>Contact</h5>
@@ -287,7 +270,8 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script type="module" src="./navbar/nav.js"></script>
+<script>
 // Filter
 (function(){
   const chips = document.querySelectorAll('.chip');
