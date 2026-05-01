@@ -31,12 +31,12 @@
       <div class="phase-cell active">
         <div class="ph-label"><span>S1 · Foundations</span><span>In progress</span></div>
         <div class="ph-name">Prototype + patent</div>
-        <div class="ph-track"><div class="ph-fill" style="width: 62%"></div></div>
+        <div class="ph-track"><div class="ph-fill" style="width: 5%"></div></div>
       </div>
       <div class="phase-cell">
         <div class="ph-label"><span>S2 · Validation</span><span>Queued</span></div>
         <div class="ph-name">Phantom testing</div>
-        <div class="ph-track"><div class="ph-fill" style="width: 8%"></div></div>
+        <div class="ph-track"><div class="ph-fill" style="width: 2%"></div></div>
       </div>
       <div class="phase-cell">
         <div class="ph-label"><span>S3 · Pilot</span><span>—</span></div>
@@ -66,14 +66,38 @@
     </div>
 
     <div class="log" id="log">
-
-      <article class="entry featured" data-cat="milestone" data-phase="S1">
+      <article class="entry featured" data-cat="research" data-phase="S1">
         <div class="entry-meta">
-          <span class="phase-tag">S1 · Now</span>
-          <span class="cat-tag" data-cat="milestone">Milestone</span>
+          <span class="phase-tag">5/1/26</span>
+          <span class="cat-tag" data-cat="research">Research</span>
         </div>
         <div class="entry-body">
           <span class="now-pill">Latest update</span>
+          <h3>Meeting with Veteran Electrical Impedance Imaging Researcher</h3>
+          <p>
+            Today EIT-tek met with a veteran electrical impedance tomography researcher to discuss the direction of 
+            our project and the realistic goals EIT-tek can achieve. 
+            
+            This call taught us a lot, instead of utilizing the HHT (Hilbert Huang Transform) an algorithm that is 
+            particularly useful for analyzing signals whose spectral content changes in time. This algorithm provides 
+            an instantaneous frequency, which is already a known value in Electrical Impedance Imaging. Additionally 
+            we learned that in order to generate a good image you need a very high dB value.
+
+            We will now be looking into a EIT/EIM hybrid approach which has been used in a clinical setting to assess
+            changes in muscle architecture, specifically by reading the fluid buildup represented by edema.
+          </p>
+          <div class="artifact">
+            <span>#pivot</span><span>#dev-log</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="milestone" data-phase="S1">
+        <div class="entry-meta">
+          <span class="phase-tag">4/25/2026</span>
+          <span class="cat-tag" data-cat="milestone">Milestone</span>
+        </div>
+        <div class="entry-body">
           <h3>Launching the public build log.</h3>
           <p>
             Going public with progress. The goal: treat this like a wet-lab notebook anyone can read. Trainers, clinicians, and
@@ -89,132 +113,6 @@
           </div>
         </div>
       </article>
-
-      <article class="entry" data-cat="software" data-phase="S1">
-        <div class="entry-meta">
-          <span class="phase-tag">S1</span>
-          <span class="cat-tag" data-cat="software">Software</span>
-        </div>
-        <div class="entry-body">
-          <h3>First pyEIT 2D circular mesh running locally.</h3>
-          <p>
-            Got a 16-electrode 2D circular reconstruction mesh building end-to-end in pyEIT. Forward model solves in
-            ~40ms on synthetic data. Inverse reconstruction still has edge artifacts near the boundary electrodes —
-            expected, working on regularization next.
-          </p>
-          <ul>
-            <li>16 nodes on the outer ring, uniform spacing</li>
-            <li>Gauss-Newton inverse solver, single step for now</li>
-            <li>Synthetic phantom with two conductivity inclusions for testing</li>
-          </ul>
-          <div class="artifact"><span>pyEIT</span><span>reconstruction</span><span>python</span></div>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="hardware" data-phase="S1">
-        <div class="entry-meta">
-          <span class="phase-tag">S1</span>
-          <span class="cat-tag" data-cat="hardware">Hardware</span>
-        </div>
-        <div class="entry-body">
-          <h3>Bench-top electrode ring — v0 assembled.</h3>
-          <p>
-            Ugly but functional. 16 electrodes on an adjustable strap, breadboarded multiplexer, bench power supply.
-            Not going on anyone's arm yet — this is just to verify we can inject current across arbitrary pairs and
-            measure the voltage differential everywhere else cleanly.
-          </p>
-          <p>
-            Early reading: SNR is noisier than I want at low injection amplitudes. Candidate fix list: better shielding on
-            the measurement lines, moving to differential amps, and — the big one — letting HHT do its job on the output.
-          </p>
-          <div class="artifact"><span>v0-hardware</span><span>multiplexer</span><span>benchtop</span></div>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="research" data-phase="S1">
-        <div class="entry-meta">
-          <span class="phase-tag">S1</span>
-          <span class="cat-tag" data-cat="research">Research</span>
-        </div>
-        <div class="entry-body">
-          <h3>Reading week: HHT on biomedical signals.</h3>
-          <p>
-            Deep dive into the original NASA HHT papers plus recent biomedical applications. The empirical mode
-            decomposition step is the interesting one for us — unlike FFT it doesn't assume stationarity, which is
-            perfect for the kind of quasi-random noise you get through muscle tissue.
-          </p>
-          <p>
-            Key takeaway: the intrinsic mode functions cluster predictably when the injected signal is clean. Noise
-            ends up isolated in the highest-frequency IMFs and can be dropped without touching the signal band.
-          </p>
-          <div class="artifact"><span>HHT</span><span>EMD</span><span>literature-review</span></div>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="ops" data-phase="S1">
-        <div class="entry-meta">
-          <span class="phase-tag">S1</span>
-          <span class="cat-tag" data-cat="ops">Ops</span>
-        </div>
-        <div class="entry-body">
-          <h3>Pre-seed raise — kicking off.</h3>
-          <p>
-            Opened conversations for the $60K pre-seed round. Structure: convertible notes, 20% discount,
-            $4M cap. Target close by end of Q2. First meetings scheduled with two university-affiliated funds
-            and one solo angel in the sports-tech space.
-          </p>
-          <div class="artifact"><span>fundraise</span><span>pre-seed</span></div>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="research" data-phase="S1">
-        <div class="entry-meta">
-          <span class="phase-tag">S1</span>
-          <span class="cat-tag" data-cat="research">Research</span>
-        </div>
-        <div class="entry-body">
-          <h3>University partner conversations.</h3>
-          <p>
-            Three initial conversations with university sports-medicine departments about a potential pilot.
-            Consistent theme: trainers want objective tissue data, not another wearable that spits out step counts.
-            That's the wedge — replacing subjective palpation with a repeatable impedance map.
-          </p>
-          <div class="artifact"><span>pilot-scoping</span><span>user-research</span></div>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="hardware" data-phase="S1">
-        <div class="entry-meta">
-          <span class="phase-tag">S1</span>
-          <span class="cat-tag" data-cat="hardware">Hardware</span>
-        </div>
-        <div class="entry-body">
-          <h3>Electrode material shortlist.</h3>
-          <p>
-            Sourcing comparison done. Tested three candidates for dry-contact electrodes: conductive silicone,
-            stainless steel pads, and carbon-loaded fabric. Fabric wins on comfort + repeatability, silicone wins on
-            conductivity. Leaning silicone for the phantom setup, fabric for the eventual wearable sleeve.
-          </p>
-          <div class="artifact"><span>electrodes</span><span>sourcing</span><span>v1-prep</span></div>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="milestone" data-phase="S1">
-        <div class="entry-meta">
-          <span class="phase-tag">S1</span>
-          <span class="cat-tag" data-cat="milestone">Milestone</span>
-        </div>
-        <div class="entry-body">
-          <h3>Project officially underway.</h3>
-          <p>
-            EIT-tek is live. Scope for the next 90 days: hardware v0, 2D reconstruction pipeline, HHT on example data,
-            and a provisional patent filing. Everything after that — phantom validation, NASA licensing, pilot testing —
-            waits on that foundation.
-          </p>
-          <div class="artifact"><span>kickoff</span><span>S1-start</span></div>
-        </div>
-      </article>
-
     </div>
 
     <div class="empty-state" id="empty">No entries match that filter.</div>
