@@ -169,20 +169,6 @@
   emailjs.init('mSZvCXKZzXtj5jsYe');
 </script>
 <script>
-// Now indicator
-(function(){
-  const el = document.getElementById('nowVal');
-  const row = document.getElementById('nowRow');
-  const d = new Date();
-  const h = d.getHours();
-  const day = d.getDay();
-  let status = 'Out of hours';
-  if (day >= 1 && day <= 5 && h >= 9 && h < 19) status = '● Available';
-  else if (day === 6) status = 'By appointment';
-  el.textContent = status;
-  if (!status.includes('Available')) row.classList.remove('active');
-})();
-
 // Form
 (function(){
   const form = document.getElementById('contactForm');
