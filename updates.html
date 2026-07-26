@@ -31,12 +31,12 @@
       <div class="phase-cell active">
         <div class="ph-label"><span>S1 · Foundations</span><span>In progress</span></div>
         <div class="ph-name">Prototype + patent</div>
-        <div class="ph-track"><div class="ph-fill" style="width: 35%"></div></div>
+        <div class="ph-track"><div class="ph-fill" style="width: 43%"></div></div>
       </div>
       <div class="phase-cell">
         <div class="ph-label"><span>S2 · Validation</span><span>Queued</span></div>
         <div class="ph-name">Phantom testing</div>
-        <div class="ph-track"><div class="ph-fill" style="width: 2%"></div></div>
+        <div class="ph-track"><div class="ph-fill" style="width: 16%"></div></div>
       </div>
       <div class="phase-cell">
         <div class="ph-label"><span>S3 · Pilot</span><span>—</span></div>
@@ -70,10 +70,36 @@
       <article class="entry featured" data-cat="hardware" data-phase="S1">
         <div class="entry-meta">
           <span class="phase-tag">7/14/26</span>
-          <span class="cat-tag" data-cat="milestone">Milestone</span>
+          <span class="cat-tag" data-cat="hardware">Hardware</span>
         </div>
         <div class="entry-body" style='justify-content: center;'>
           <span class="now-pill">Latest update</span>
+          <h3>Custom MUX PCB</h3>
+          <p>
+            Hi all, it has been a minute since I have posted a dev-log, however I have been hard at work learning PCB design to build the front end hardware for the phantom MK2.
+            Below are some photos of the PCB I have been building. Mind the mess of traces it is my first time. The following board utilizes 2 ADG725BSUZ chips to create a total of 4
+            16x1 muxes (2 for each chip). While researching I found that this specific chip had no compatible versions with breadboards, so I decided that it would be a good learning
+            experience to design on my own. The components near the bottom of the board is just a simple light indicator that lets me know if the chips are getting
+            power. One of the main reasons I decided to go with a custom board is I wanted to ensure the connection was stable among all of the 64 wires that will be running into the
+            16 electrode ring for the phantom MK2.
+          </p>
+          <div style="display: flex; gap: 12px; margin-top: 20px;">
+            <img src="./images/Screenshot 2026-07-25 182659.png" width="300px">
+            <img src="./images/Screenshot 2026-07-25 182716.png" width="300px">
+            <img src="./images/Screenshot 2026-07-25 183721.png" width="300px">
+          </div>
+          <div class="artifact">
+            <span>#PCB-Design</span><span>#NewSkill</span><span>#Prototype</span><span>#EmbeddedHardware</span><span>#dev-log</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="hardware" data-phase="S1">
+        <div class="entry-meta">
+          <span class="phase-tag">7/14/26</span>
+          <span class="cat-tag" data-cat="milestone">Milestone</span>
+        </div>
+        <div class="entry-body" style='justify-content: center;'>
           <h3>Phantom Mk2 and shipping delays</h3>
           <p>
             Attached is a photo of our first phantom design along with the data gathered. The setup is entirely custom, I 3d modeled the lid to hold 4mm thick steel rods that act
