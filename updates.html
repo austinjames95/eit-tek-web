@@ -83,7 +83,7 @@
             power. One of the main reasons I decided to go with a custom board is I wanted to ensure the connection was stable among all of the 64 wires that will be running into the
             16 electrode ring for the phantom MK2.
           </p>
-          <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <div class="entry-images">
             <img src="./images/Screenshot 2026-07-25 182659.png" width="300px">
             <img src="./images/Screenshot 2026-07-25 182716.png" width="300px">
             <img src="./images/Screenshot 2026-07-25 183721.png" width="300px">
@@ -108,7 +108,7 @@
             has already been printed, but will be much more complicated, as it will include 16 electrodes which require a 1:16 mux. We are currently in the process of custom printing
             PCB to be compatable with a breadboard for an easy prototyping process.
           </p>
-          <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <div class="entry-images">
             <img src="./images/1783491312832.jpg" width="300px">
             <img src="./images/1783491312356.jpg" width="300px">
           </div>
@@ -135,7 +135,7 @@
             show more photos when I complete the model. However with the 16 electrode array requires me to build a mux using 2 ADG725 chips. More updates to come!
 
           </p>
-          <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <div class="entry-images">
             <img src="./images/Screenshot 2026-07-05 230917.png" width="200px">
             <img src="./images/Screenshot 2026-07-05 230933.png" width="200px">
           </div>
@@ -164,7 +164,7 @@
 
 
           </p>
-          <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <div class="entry-images">
             <img src="./images/Screenshot 2026-06-24 230421.png" width="200px">
             <img src="./images/Screenshot 2026-06-24 230433.png" width="200px">
           </div>
@@ -370,38 +370,46 @@
 
 <script type="module" src="./navbar/nav.js"></script>
 <script>
-// Filter
-(function(){
-  const chips = document.querySelectorAll('.chip');
-  const entries = document.querySelectorAll('#log .entry');
-  const empty = document.getElementById('empty');
+  // Filter
+  (function(){
+    const chips = document.querySelectorAll('.chip');
+    const entries = document.querySelectorAll('#log .entry');
+    const empty = document.getElementById('empty');
 
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const f = chip.dataset.filter;
-      let visible = 0;
-      entries.forEach(e => {
-        const show = f === 'all' || e.dataset.cat === f;
-        e.style.display = show ? '' : 'none';
-        if (show) visible++;
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const f = chip.dataset.filter;
+        let visible = 0;
+        entries.forEach(e => {
+          const show = f === 'all' || e.dataset.cat === f;
+          e.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        empty.classList.toggle('show', visible === 0);
       });
-      empty.classList.toggle('show', visible === 0);
     });
-  });
-})();
+  })();
 
-// Subscribe
-(function(){
-  const f = document.getElementById('subForm');
-  const t = document.getElementById('subThanks');
-  f.addEventListener('submit', (e) => {
-    e.preventDefault();
-    t.classList.add('show');
-    f.reset();
-  });
-})();
+  // Subscribe
+  (function(){
+    const f = document.getElementById('subForm');
+    const t = document.getElementById('subThanks');
+    if (!f || !t) return;
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      t.classList.add('show');
+      f.reset();
+    });
+  })();
+
+  // Click an entry image to enlarge it
+  (function(){
+    document.querySelectorAll('#log img').forEach(img => {
+      img.addEventListener('click', () => img.classList.toggle('enlarged'));
+    });
+  })();
 </script>
 
 </body>

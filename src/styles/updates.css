@@ -1,3 +1,23 @@
+/* Click-to-enlarge images in the build log */
+.entry-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+#log img {
+    cursor: pointer;
+    transition: width 0.25s ease;
+}
+#log .entry-images img {
+    flex: 0 0 auto;
+}
+#log img.enlarged {
+    width: min(100%, 900px);
+    height: auto;
+    background-color: #3a3a38;
+}
+
 .page-hero {
   padding: 80px 0 30px;
   position: relative;
