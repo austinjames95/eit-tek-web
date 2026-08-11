@@ -74,6 +74,30 @@
         </div>
         <div class="entry-body" style='justify-content: center;'>
           <span class="now-pill">Latest update</span>
+          <h3>Finalizing custom PCB / CrossCore Embedded Studio</h3>
+          <p>
+            After asking reddit I found some issues with my inital circuit design. Since this is my first actual printed circuit board, I needed to worry about a lot more than just whether
+            my circuit worked in ltSpice; I would also need to worry about the physics behind traces and the electromagnetic fields it creates and how it interacts with the other traces. 
+            Additionally I needed to worry about decoupling capacitors as to ensure a steady, consistent stream of voltage to the chip. Another thing I also forgot was "copper pours" or a 
+            ground around the entire board. I went ahead and added this to make the grounding of the decoupling capacitors easier. I have ordered and shipped the circuit board to my address
+            and will update / experiment once I recieve it. I have also started trying to figure out how to use CrossCore Embedded Studio, I have taken a class on embedded programing at RPI
+            but I have never worked with this specific board before so there will be a bit of a learning curve!
+          </p>
+          <div class="entry-images">
+            <img src="Screenshot 2026-08-10 172445.png" width="300px">
+          </div>
+          <div class="artifact">
+            <span>#PCB-Design</span><span>#NewSoftware</span><span>#Prototype</span><span>#EmbeddedHardware</span><span>#dev-log</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="hardware" data-phase="S1">
+        <div class="entry-meta">
+          <span class="phase-tag">7/25/26</span>
+          <span class="cat-tag" data-cat="hardware">Hardware</span>
+        </div>
+        <div class="entry-body" style='justify-content: center;'>
           <h3>Custom MUX PCB</h3>
           <p>
             Hi all, it has been a minute since I have posted a dev-log, however I have been hard at work learning PCB design to build the front end hardware for the phantom MK2.
