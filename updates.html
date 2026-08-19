@@ -69,18 +69,39 @@
 
       <article class="entry featured" data-cat="hardware" data-phase="S1">
         <div class="entry-meta">
+          <span class="phase-tag">8/19/26</span>
+          <span class="cat-tag" data-cat="hardware">Research</span>
+        </div>
+        <div class="entry-body" style='justify-content: center;'>
+          <span class="now-pill">Latest update</span>
+          <h3>Feasibility Confirmation and the future of EIT-tek</h3>
+          <p>
+            Recently the EIT-tek team has had multiple calls with researchers and investors to determine the feasibility of the product we are trying to create. The products capabilities has changed
+            as I personally learn more about this exciting yet limited technology. The end goal stays the same, an analysis device that allows athletic trainers and athletes never before seen insight
+            to their musculoskeletal health and recovery. After some recent meetings we have determined that our approach to solving this problem is scientifically possible and shows promise to 
+            investors. We are hard at work on creating a wearable prototype aimed for a November 2026 showcase; this demo should offer a wearable band, either for an arm or an ankle (one or the other)
+            that users can use to demo scans. An MVP (without custom hardware) should come by the end of the year to hopefully be used in a pilot program. 
+          </p>
+          <div class="artifact">
+            <span>#Meetings</span><span>#Prototype</span><span>#WeCanDoIt!!!</span><span>#dev-log</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="hardware" data-phase="S1">
+        <div class="entry-meta">
           <span class="phase-tag">7/25/26</span>
           <span class="cat-tag" data-cat="hardware">Hardware</span>
         </div>
         <div class="entry-body" style='justify-content: center;'>
-          <span class="now-pill">Latest update</span>
+
           <h3>Finalizing custom PCB / CrossCore Embedded Studio</h3>
           <p>
-            After asking reddit I found some issues with my inital circuit design. Since this is my first actual printed circuit board, I needed to worry about a lot more than just whether
+            After asking reddit I found some issues with my initial circuit design. Since this is my first actual printed circuit board, I needed to worry about a lot more than just whether
             my circuit worked in ltSpice; I would also need to worry about the physics behind traces and the electromagnetic fields it creates and how it interacts with the other traces. 
             Additionally I needed to worry about decoupling capacitors as to ensure a steady, consistent stream of voltage to the chip. Another thing I also forgot was "copper pours" or a 
             ground around the entire board. I went ahead and added this to make the grounding of the decoupling capacitors easier. I have ordered and shipped the circuit board to my address
-            and will update / experiment once I recieve it. I have also started trying to figure out how to use CrossCore Embedded Studio, I have taken a class on embedded programing at RPI
+            and will update / experiment once I receive it. I have also started trying to figure out how to use CrossCore Embedded Studio, I have taken a class on embedded programming at RPI
             but I have never worked with this specific board before so there will be a bit of a learning curve!
           </p>
           <div class="entry-images">
@@ -130,7 +151,7 @@
             as the electrodes and to fit onto a random glass vase I found in my house. This setup cannot produce any images as it was just a demonstration of a bone in vs bone out
             impedance test. It was mainly used as a learning opportunity to understand the data collection and the software I will be using for the upcoming test. The next phantom 
             has already been printed, but will be much more complicated, as it will include 16 electrodes which require a 1:16 mux. We are currently in the process of custom printing
-            PCB to be compatable with a breadboard for an easy prototyping process.
+            PCB to be compatible with a breadboard for an easy prototyping process.
           </p>
           <div class="entry-images">
             <img src="./images/1783491312832.jpg" width="300px">
@@ -206,7 +227,7 @@
         <div class="entry-body">
           <h3>Video Promotion Material for EIT-tek</h3>
           <p>
-            While I have been researching the type of electrodes to use, it occured to me that this isn't going to be a cheap project. To solve
+            While I have been researching the type of electrodes to use, it occurred to me that this isn't going to be a cheap project. To solve
             this issue I have decided to begin reaching out to potential sponsors / investors of the project, to be successful in this feat, we
             must first make a promotion video / an elevator pitch to convey the severity and importance of this product. It will also help 
             EIT-tek on social media platforms to achieve a small but recognizable presence. I am specifically interested in the <a href="https://www.goodneighbor.fund/"><b>Good Neighbor Fund</b></a>
@@ -229,7 +250,7 @@
           <p>
             We have found some models on NIH 3D that would make good phantoms, specifically we have decided to model the Radius bone to measure
             bio impedance testing. (link to 3d model: <a href="https://3d.nih.gov/entries/3DPX-016811">here</a>), an image has also been attached
-            for reference. However while testing our 3d printer's leveling and filament dispencement, a part known to be a weakness of the Ender
+            for reference. However while testing our 3d printer's leveling and filament dispersement, a part known to be a weakness of the Ender
             3 v2 snapped in half, we have ordered the replacement part on and should continue with the phantom creation the following week.
             <img src="/images/9a4xb4f207535037-2191465512.jpg" width="200px" style="justify-self: center; margin-top: 20px;">
           </p>
@@ -247,10 +268,10 @@
         <div class="entry-body">
           <h3>Beginning Experimenting With Hardware</h3>
           <p>
-            We have recieved our hardware from Analog Digital this past week and have begun setting up the software necessarry to begin testing.
+            We have received our hardware from Analog Digital this past week and have begun setting up the software necessary to begin testing.
             The last couple of weeks have been slow as I recently had surgery on my right hand and have been recovering. Our first goal is to 
             understand the bundled software with the analog digital hardware, specifically analog devices SensorPal. We also want to begin 
-            experiemnting with phantoms as soon as possible, this means 3d printing a mock bone and placing it in a saline control tube to
+            experimenting with phantoms as soon as possible, this means 3d printing a mock bone and placing it in a saline control tube to
             simulate a bone surrounded by blood. We will begin building researching electrode sensors to use for the phantom model. 
             <img src="./images/PXL_20260526_020116575.png" width="400px" style="justify-self: center; margin-top: 20px;">
           </p>
@@ -266,14 +287,14 @@
           <span class="cat-tag" data-cat="research">Hardware</span>
         </div>
         <div class="entry-body">
-          <h3>Commiting to Alternative Hardware</h3>
+          <h3>committing to Alternative Hardware</h3>
           <p>
-            Yesterday EIT-tek has committed and ordered our choice of hardware. We have decieded to go with AN-1557 stack from
+            Yesterday EIT-tek has committed and ordered our choice of hardware. We have decided to go with AN-1557 stack from
             analog digital. The following hardware is a major improvement and a more specialized stack for bio-impedance imaging.
             Analog digital has specific drivers for analyzing these signals, if you are interested in the hardware we will be 
             using, click <a href="https://www.analog.com/en/resources/app-notes/an-1557.html">here</a>. Compared to the Red Pitaya this hardware stack
-            produces greater noise at 100dB compared to 80dB, effectivly a 100 times better result than the Red Pitaya,
-            (db scales logarithmically). The total cost of this hardware was about 600 dollars, we should recieve this stack within the coming week.
+            produces greater noise at 100dB compared to 80dB, effectively a 100 times better result than the Red Pitaya,
+            (db scales logarithmically). The total cost of this hardware was about 600 dollars, we should receive this stack within the coming week.
             Additionally we plan on creating an analog mux in the frontend to allow us to create multiple channels of electrodes. More to come.
           </p>
           <div class="artifact">
@@ -292,11 +313,11 @@
           <p>
             After our previous meeting with a researcher in the electrical impedance tomography field, we have had a lot
             to think about, I went into this project thinking the <a href="https://github.com/HCIELab/EIT-kit_open-source">EIT-KIT</a> from MIT was going to be
-            the solution our imaging problems. However after doing further research we have decieded to move forward with the Red Pitaya board for
+            the solution our imaging problems. However after doing further research we have decided to move forward with the Red Pitaya board for
             further testing. This device (specifically the Red-Pitaya STEMlab 125-14) offers us more customizable hardware,
             and higher dB readings than that of the EIT-KIT.
 
-            Though subsituting size for strength, we believe it can still be a portable, accessible, and cost effective imaging
+            Though substituting size for strength, we believe it can still be a portable, accessible, and cost effective imaging
             tool. Additionally this specific hardware has been referenced in multiple EIT papers. Though we will consult with professionals
             we believe this is the path EIT-tek will be heading.
           </p>
@@ -345,7 +366,7 @@
           </p>
           <p>
             Next up: finishing the 2D pyEIT mesh, filing the provisional patent, and running the first Hilbert-Huang pass
-            on a clean reference signal to baseline the denoising before we touch the phantom.
+            on a clean reference signal to baseline the diagnosing before we touch the phantom.
           </p>
           <div class="artifact">
             <span>#public-build</span><span>#dev-log</span><span>#transparency</span>
