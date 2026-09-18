@@ -293,3 +293,30 @@
   display: none;
 }
 .empty-state.show { display: block; }
+/* ===== Mobile (portrait phones) ===== */
+.entry-body { min-width: 0; }
+
+@media (max-width: 800px) {
+  .phase-bar { padding: 0; }
+  .phase-cell:nth-last-child(-n+2) { border-bottom: none; }
+}
+@media (max-width: 600px) {
+  .page-hero { padding: 40px 0 24px; }
+  .page-hero h1 { font-size: clamp(38px, 13vw, 64px); margin: 8px 0 16px; }
+  .phase-bar { margin-top: 28px; }
+  .filter-strip { padding: 20px 0 18px; gap: 8px; }
+
+  .entry { padding: 28px 0; gap: 14px; }
+  .entry-meta { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+  .entry-body h3 { font-size: clamp(22px, 6.5vw, 30px); }
+  .entry.featured { padding: 36px var(--pad); }
+}
+@media (max-width: 520px) {
+  .phase-bar { grid-template-columns: 1fr; }
+  .phase-cell { border-right: none; border-bottom: 1px solid var(--ink); }
+  .phase-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--ink); }
+  .phase-cell:last-child { border-bottom: none; }
+}
+
+/* Category label was ink-on-ink inside the dark featured entry */
+.entry.featured .entry-meta .cat-tag { color: #c9c7bf; }

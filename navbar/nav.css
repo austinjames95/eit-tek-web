@@ -56,3 +56,18 @@
   transition: background 0.15s;
 }
 .nav-cta:hover { background: var(--ink); }
+
+/* Mobile: drop the redundant CTA (Contact is already a link) and tighten up */
+@media (max-width: 700px) {
+  .nav-inner { padding: 12px var(--pad); gap: 12px; flex-wrap: wrap; }
+  .nav-logo { font-size: 24px; }
+  .nav-links { gap: 0; font-size: 11px; letter-spacing: 0.06em; }
+  .nav-links a { padding: 8px 10px; }
+  .nav-cta { display: none; }
+}
+@media (max-width: 420px) {
+  .nav-logo { font-size: 20px; }
+  .nav-logo .dot { width: 8px; height: 8px; }
+  .nav-links { font-size: 10.5px; }
+  .nav-links a { padding: 8px 6px; }
+}

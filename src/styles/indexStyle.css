@@ -522,3 +522,48 @@
   .sec-head { flex-direction: column; align-items: flex-start; }
   .sec-head-l { max-width: 100%; }
 }
+/* ===== 3-up stats (Market) — a class instead of an inline style so it can go responsive ===== */
+.stats.stats-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 700px) {
+  .stats.stats-3 { grid-template-columns: 1fr; }
+}
+
+/* ===== Mobile (portrait phones) ===== */
+@media (max-width: 600px) {
+  .hero { padding-top: 24px; padding-bottom: 24px; }
+  .hero-meta { gap: 16px 12px; font-size: 10px; letter-spacing: 0.1em; }
+
+  .hero-title { font-size: clamp(40px, 12.5vw, 64px); margin: 32px 0 16px; }
+  /* Let the underlined phrase wrap; a text-decoration follows the wrapped lines, the ::after bar can't */
+  .hero-title .underline {
+    white-space: normal;
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 0.07em;
+    text-underline-offset: 0.08em;
+  }
+  .hero-title .underline::after { display: none; }
+
+  .hero-row { gap: 32px; margin-top: 24px; }
+  .device { padding: 16px; }
+
+  .stat { min-height: 0; padding: 24px 20px; gap: 24px; }
+  .stat .big { font-size: clamp(32px, 9.5vw, 56px); }
+
+  .solution { gap: 32px; }
+  .solution-visual { aspect-ratio: 4 / 3; }
+  .bullets li { grid-template-columns: 32px 1fr; gap: 12px; }
+  .bullets li h4 { font-size: 20px; }
+
+  .hw-card .hw-body { padding: 22px 20px 26px; }
+
+  .tl-col { min-height: 0; padding: 22px 20px 26px; }
+
+  .ask { padding: 40px 0; gap: 28px; }
+  .ask-amount { font-size: clamp(72px, 24vw, 120px); }
+  .ask-amount small { line-height: 1.5; }
+
+  .cta-band { padding: 48px var(--pad); gap: 28px; }
+
+  .sec-head { gap: 16px; margin-bottom: 28px; }
+}

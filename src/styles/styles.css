@@ -261,3 +261,25 @@ section { padding: 80px 0; }
 @media (max-width: 700px) {
   section { padding: 56px 0; }
 }
+
+/* ------------- Mobile (portrait phones) ------------- */
+.display { overflow-wrap: break-word; }
+
+@media (max-width: 600px) {
+  .h-lg { font-size: clamp(30px, 8.5vw, 52px); }
+  .h-md { font-size: clamp(26px, 7.5vw, 40px); }
+
+  .lede { margin-top: 1.25rem; line-height: 1.7; }
+  .closer { margin-top: 1.25rem; }
+
+  .btn { padding: 14px 20px; }
+
+  .eyebrow-strip { flex-wrap: wrap; gap: 6px 10px; }
+  .eyebrow-strip .dash { display: none; }
+
+  .foot { margin-top: 56px; }
+  .foot-inner { padding: 48px var(--pad) 24px; }
+  .foot-top { grid-template-columns: 1fr; gap: 32px; padding-bottom: 36px; }
+  .foot-brand { font-size: 44px; }
+  .foot-col a, .foot-col p { overflow-wrap: anywhere; }
+}
